@@ -73,8 +73,8 @@ export default {
     // 创建新评论
     async createNewComment() {
       if (this.message.trim().length === 0) {
-        this.$toast('评论不能为空');
         this.message = '';
+        return this.$toast('评论不能为空');
       }
       const { data: res } = await this.$http.post(`/api/postcomment/${this.Id}`, {
         content: this.message
