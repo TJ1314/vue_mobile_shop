@@ -104,6 +104,7 @@ export default {
       // 传递初始添加规格
       this.$store.commit('beginNum', num);
       this.$store.commit('addShop', id);
+      this.$toast('添加成功!');
     },
     shopNum() {
       // console.log(this.value);
